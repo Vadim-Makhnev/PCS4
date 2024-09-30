@@ -1,16 +1,7 @@
-# untitled4
+# Практическая работа № 3
+## Махнев Вадим Анатольевич ЭФБО-05-22
 
-A new Flutter project.
+Игровой магазин. Пять товарных карточек с характеристиками
+![1PCS3](https://github.com/user-attachments/assets/8cc97523-8f47-4f73-bc0f-a34a5627a96c)
+![2PCS3](https://github.com/user-attachments/assets/fe593bfc-1f5d-4c8b-8259-585febd4cb55)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
