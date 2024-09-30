@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        body: GameList(),
+        body:  GameList(),
       ),
     );
   }
@@ -35,7 +35,15 @@ class GameList extends StatelessWidget {
     {
       'name': 'GTA VI',
       'image': 'https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1jAyV3.img',
-      'description': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.'
+      'description': 'Артикул: GTA6-PS5-2024\n\n'
+          'Добро пожаловать в мир Grand Theft Auto VI — следующую главу культовой серии игр от Rockstar Games! '
+          'Вас ждет масштабный открытый мир, охватывающий не только знаменитый город Вайс-Сити, но и множество новых локаций, '
+          'включая джунгли, побережья и мегаполисы. История расскажет о двух главных героях, чьи судьбы переплетаются в криминальном мире. '
+          'Многослойный сюжет, продвинутая система взаимодействий с окружающим миром и ультрареалистичная графика делают GTA VI одной из самых ожидаемых игр десятилетия.\n\n'
+          'Особенности игры:\n'
+          'Цена: 4999 рублей\n\n'
+          'Платформы: PlayStation 5, Xbox Series X|S, PC\n'
+          'Дата выхода: 2024.'
     },
     {
       'name': 'Cyberpunk 2077',
@@ -59,6 +67,8 @@ class GameList extends StatelessWidget {
     },
   ];
 
+  GameList({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
@@ -67,7 +77,7 @@ class GameList extends StatelessWidget {
         return ListTile(
           title: Text(
             games[index]['name']!,
-            style: const TextStyle(color: Colors.white, fontSize: 32),
+            style: const TextStyle(color: Colors.white, fontSize: 26),
           ),
           subtitle: Row(
             children: [
@@ -80,8 +90,8 @@ class GameList extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 320,
-                height: 160,
+                width: 200,
+                height: 150,
                 margin: const EdgeInsets.only(left: 8.0),
                 child: Image.network(
                   games[index]['image']!,
@@ -116,7 +126,7 @@ class GameDetail extends StatelessWidget {
   final String imageUrl;
   final String description;
 
-  const GameDetail({
+  const GameDetail({super.key, 
     required this.name,
     required this.imageUrl,
     required this.description,
@@ -132,7 +142,7 @@ class GameDetail extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
+          SizedBox(
             width: double.infinity,
             height: 200,
             child: Image.network(
